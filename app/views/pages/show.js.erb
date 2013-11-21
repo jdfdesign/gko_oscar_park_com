@@ -1,0 +1,6 @@
+$("body").append('<%= escape_javascript(render('modal')) %>'); 
+$("#page-modal-dialog").on('show.bs.modal', function (e) {
+  $(this).find('.modal-dialog:first').css('width', $(window).width() - 60);
+}).on('hidden.bs.modal', function (e) {
+  $(this).remove();
+}).modal( { backdrop: 'static', show: true } ) 

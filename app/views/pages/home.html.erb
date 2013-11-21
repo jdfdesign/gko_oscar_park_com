@@ -1,0 +1,79 @@
+<% content_for :header do %>
+<section id="header" data-bg="<%= resource.thumbnail.thumbnail.black_and_white("1200x800#").url() if resource.thumbnail %>">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <div id="content-wrapper">
+        <div id="content">
+          <div class="text-container">
+            <%= image_tag("logo-oscarpark.png", :id => "logo") %>
+            <div id="intro-text">
+              <h1>Parking privé de 14 places au centre de Gustavia</h1>
+              <h2><em>Votre parking très privé à Gustavia</em></h2>
+            </div> 
+          </div>
+        </div>
+      </div>   
+    </div>
+  </div>
+</section>
+<% end %>
+<section id="about" class="section">
+  <div class="container" class="text-center">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Petite île, petite ville, peu de stationnement…</h3>
+        <p>OscarPark ne prétend pas résoudre les problèmes de stationnement de Gustavia… mais si cela résout le votre, c’est l’essentiel ;-)</p>
+        <p>OscarPark, c’est votre solution pour accéder au commerces et aux restaurants de Gustavia, simplement et à tout moment. Votre place de stationnement est réservée pour vous, vous y accédez simplement avec votre code secret pour ouvrir la barrière.</p>
+        <p>Le parking OscarPark est idéalement situé en plein coeur de Gustavia, à proximité immédiate des restaurants Isola, Black Ginger, Eddy’s, Gustav’…</p>
+        <p>OscarPark est proposé par la société de location de voitures Oscar St Barth Car Rental (lien vers www.oscarstbarth.com)</p>
+      </div>
+    </div> 
+  </div>
+</section>
+<%= render "google_map" %>        
+<section id="infos" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <h3>Tarifs de stationnement</h3> 
+        <p><strong>Tarifs de stationnement*</strong>
+          <br>à la journée : 20€
+          <br>à la semaine : 120€</p>
+        <p><strong>Clients Oscar St Barth Car Rental</strong>
+        <br>remise de 15%
+        <br>GRATUIT si location d’une FIAT 500C**
+     </div>
+     <div class="col-xs-12 col-sm-6">
+        <h3>Où acheter le service OscarPark ?</h3>
+        <p>Par e-mail à <%= mail_to "oscarpark@oscarstbarth.com" %>
+        <br>En vente à la boutique COULEURS DES ÎLES de 9h à 19h30 rue du Général de Gaulle (début de la rue pavée, avant le Select)</p>
+     </div>
+   </div>
+  </div>
+</section>
+<section id="conditions" class="section">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Conditions générales de vente</h3>
+        <p>* Le stationnement s’entend de 6h à 6h. 
+        <br>** le stationnement est gratuit 7 jours/7 et 24h/24 pendant toute la durée de la location d’une Fiat 500 Convertible (Fiat 500C) louée chez Oscar St Barth Car Rental pendant la durée de ladite location (non cessible).</p> 
+
+        <p>OscarPark ne peut être tenu pour responsable de vol ou de dégradation de votre véhicule ou effets personnels se trouvant à l’intérieur.
+        Les frais d’enlèvement du véhicule en cas de dépassement des horaires de stationnement sont à la charge du client.</p> 
+      
+      </div>
+    </div>
+  </div>
+</section>
+<%= render 'contact' %>
+<section id="oscar" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <%= image_tag("logo.png", :id => "logo") %> 
+        <p><small><em>A service offered by OSCAR CAR RENTAL</em></small></p>
+     </div>
+   </div>
+  </div>
+</section>

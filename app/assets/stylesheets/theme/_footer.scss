@@ -1,0 +1,34 @@
+/* COPYRIGHT
+-------------------------------------------------- */
+#copyright {
+  .container {
+    padding-top: $line-height-computed;
+    padding-bottom: $line-height-computed; 
+  }
+  p {
+     color: #989898;
+     font-size: 11px;
+     margin-bottom: 0;
+  }
+  .nav {
+    > li {
+      float: left;
+      margin-right: 15px;
+    }
+    > li > a {
+      color: #989898;
+      font-size: 11px;
+      padding: 0;
+      &:hover {
+        color: $brand-primary;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+.copyright-author {
+ 	background: transparent image-url('gko/logo_gecko_black.png') center left no-repeat;
+ 	padding-left: 28px;
+}

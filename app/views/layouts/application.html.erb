@@ -1,0 +1,20 @@
+<% homepage = current_site.sections.find_by_name("primary_menu") %>
+<!DOCTYPE html>
+<html class="no-js">
+<%= render 'head' %>
+<body id='<%= @body_id %>'>
+  <%= yield :header %>
+  <div id="page-wrapper">
+    <%#= render "navbar" %>
+    <section class="main-content">
+      <%= yield %>
+    </section>
+    <%= render 'footer' %>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <%= render 'javascripts' %>
+
+</body>  
+</html>

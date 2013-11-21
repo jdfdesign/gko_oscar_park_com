@@ -1,0 +1,62 @@
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */ 
+
+.navbar { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  //margin-bottom: 0;
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar-nav {
+      @include pull-right;
+    }
+  }
+}
+
+.navbar-nav {
+ 
+  > li > a {
+    font-family: $font-family-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    @include transition(all 0.3s ease-in-out);
+  }
+}
+
+.navbar-brand {
+  padding-top: ($navbar-height - $th-brand-logo-height)/2;
+  padding-bottom: ($navbar-height - $th-brand-logo-height)/2;
+}
+
+/* CUSTOMIZE THE LANGUAGE MENU
+-------------------------------------------------- */
+#locales-menu {
+  position: fixed;
+  z-index: $zindex-navbar-fixed + 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  border-top: 4px solid $brand-primary;
+  .nav {
+    float: right;
+  }
+  .nav > li > a { 
+    background-color: $brand-primary;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: $font-size-base - 7;
+    padding: 4px 30px;
+    @include transition(all 0.3s ease-in-out);
+    &:hover,
+    &:focus {
+      background-color: lighten($brand-primary, 10%); 
+      color: white;
+    }
+  }
+}
+
