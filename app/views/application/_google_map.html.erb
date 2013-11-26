@@ -1,7 +1,7 @@
-<%# if site.preferred_google_map_api_key.present? %>
+<% if site.preferred_google_map_api_key.present? %>
     <div id="map-canvas"></div>
     <% marker = local_assigns.has_key?(:point) ? point : "17.905198,-62.827539" %> <%# sbh %>
-    <script type='text/javascript' src="http://maps.google.com/maps/api/js?key=AIzaSyD_ciV6dGelbgiUuW04rtOMe68QVNVjzdg&sensor=false"></script>
+    <script type='text/javascript' src="http://maps.google.com/maps/api/js?key=<%= site.preferred_google_map_api_key %>&sensor=false"></script>
     
     <%= content_for :after_javascript_libraries do -%>
       <%= javascript_tag do -%>
@@ -61,4 +61,4 @@
 		});
 		<% end %>
     <% end %>
-<%# end %>
+<% end %>
