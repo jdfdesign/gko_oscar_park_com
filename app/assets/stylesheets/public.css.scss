@@ -39,6 +39,7 @@ Author URI:         http://oscar.com
 -------------------------------------------------- */
 #map-canvas {
   height: 500px;
+  @include box-sizing(content-box);
   img {
     max-width: none;
     vertical-align: middle;
