@@ -1,11 +1,11 @@
 <% content_for :header do %>
-<section id="header" data-bg="<%= resource.thumbnail.thumbnail.black_and_white("1200x800#").url() if resource.thumbnail %>">
+<section id="header" data-bg="<%= resource.thumbnail.thumbnail("1200x800#").url() if resource.thumbnail %>">
   <div class="row">
     <div class="col-xs-12 text-center">
       <div id="content-wrapper">
         <div id="content">
           <div class="text-container">
-            <%= image_tag("logo-oscarpark.png", :id => "logo") %>
+            <%= image_tag("logo-oscarpark.png", :id => "logo", :alt => "oscar parking stbarth gustavia") %>
             <div id="intro-text">
               <h1>Parking privé de 14 places au centre de Gustavia</h1>
               <h2><em>Votre parking très privé à Gustavia</em></h2>
@@ -71,8 +71,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
-        <%= image_tag("logo.png", :id => "logo") %> 
-        <p><small><em>A service offered by OSCAR CAR RENTAL</em></small></p>
+        <%= link_to "http://oscar-car-rental-stbarth.com/", :target => "_blank" do %>
+          <%= image_tag("logo.png", :id => "logo") %> 
+          <br/><small><em>A service offered by OSCAR CAR RENTAL</em></small>
+          <% end %>
      </div>
    </div>
   </div>
