@@ -35,6 +35,10 @@ jQuery(function($){
          logo.fadeIn(600, function() {
            intro_text.animate({opacity:'1'}, 600) 
          });
+         
+         if (typeof(map) != "undefined") {
+           google.maps.event.trigger(map, 'resize');
+         }
        });
     });
   }
