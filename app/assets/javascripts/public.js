@@ -180,10 +180,10 @@ jQuery(function($){
     //THEME.scrollToTop();
     THEME.placeholder();
     
-    //$('.pipe a').attr("data-remote", "true");
+    $('.pipe a').attr("data-remote", "true");
     
-   // $( window ).resize(function() {
-   //   THEME.textCenter();
-   // });
+    $( window ).resize(function() {
+      THEME.textCenter();
+    });
   });
 }); 

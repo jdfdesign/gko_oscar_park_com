@@ -4,9 +4,8 @@ tail -f log/development.log
 cd ~/Github/gko_oscar_park_com
 tail -f log/production.log
 
-
-cd ~/Github/gko_oscar_park_com
 rvm use 1.8.7 --default
+cd ~/Github/gko_oscar_park_com
 bundle install
 rails s
 
