@@ -82,12 +82,7 @@
       var infowindow_2 = new google.maps.InfoWindow({
         content: content_2
       });
-         
-      var marker_2 = new google.maps.Marker({
-        position: new google.maps.LatLng(17.898187,-62.849759),
-        map: map
-      });
-      
+
       google.maps.event.addListener(marker_1, 'click', function() {
         infowindow_1.open(map,marker_1);
       });
