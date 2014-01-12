@@ -10213,26 +10213,42 @@ span.valid {
   -ms-interpolation-mode: bicubic;
 }
 
+/* line 53, ../../app/assets/stylesheets/public.css.scss */
+#oscar-rental-ad {
+  position: fixed;
+  right: -164px;
+  top: 133px;
+  z-index: 99;
+  width: 280px;
+  height: 116px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 62, ../../app/assets/stylesheets/public.css.scss */
+#oscar-rental-ad:hover {
+  right: 0;
+}
+
 /* GLOBAL STYLE
 -------------------------------------------------- */
-/* line 58, ../../app/assets/stylesheets/public.css.scss */
+/* line 72, ../../app/assets/stylesheets/public.css.scss */
 a:focus,
 .btn:focus {
   outline: 0;
 }
 
-/* line 61, ../../app/assets/stylesheets/public.css.scss */
+/* line 75, ../../app/assets/stylesheets/public.css.scss */
 ::selection {
   background-color: #000;
   color: #fff;
 }
 
-/* line 69, ../../app/assets/stylesheets/public.css.scss */
+/* line 83, ../../app/assets/stylesheets/public.css.scss */
 .copy-text a {
   text-decoration: underline;
 }
 
-/* line 73, ../../app/assets/stylesheets/public.css.scss */
+/* line 87, ../../app/assets/stylesheets/public.css.scss */
 p {
   letter-spacing: 1px;
 }
@@ -10241,7 +10257,7 @@ p {
 -------------------------------------------------- */
 /* HEADER
 -------------------------------------------------- */
-/* line 84, ../../app/assets/stylesheets/public.css.scss */
+/* line 98, ../../app/assets/stylesheets/public.css.scss */
 html, body, #page-wrapper {
   width: 100%;
   height: 100%;
@@ -10252,12 +10268,12 @@ html, body, #page-wrapper {
   box-sizing: border-box;
 }
 
-/* line 91, ../../app/assets/stylesheets/public.css.scss */
+/* line 105, ../../app/assets/stylesheets/public.css.scss */
 body {
   font-weight: 300;
 }
 
-/* line 94, ../../app/assets/stylesheets/public.css.scss */
+/* line 108, ../../app/assets/stylesheets/public.css.scss */
 #header {
   overflow: hidden;
   height: 100%;
@@ -10265,12 +10281,12 @@ body {
   background-attachment: fixed;
   height: 100%;
 }
-/* line 101, ../../app/assets/stylesheets/public.css.scss */
+/* line 115, ../../app/assets/stylesheets/public.css.scss */
 #header h1 {
   font-size: 16px;
 }
 
-/* line 106, ../../app/assets/stylesheets/public.css.scss */
+/* line 120, ../../app/assets/stylesheets/public.css.scss */
 .no-touch #header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10279,7 +10295,7 @@ body {
   background-attachment: fixed;
 }
 
-/* line 114, ../../app/assets/stylesheets/public.css.scss */
+/* line 128, ../../app/assets/stylesheets/public.css.scss */
 #content-wrapper {
   width: 420px;
   height: 320px;
@@ -10287,7 +10303,7 @@ body {
   background-color: #f39200;
 }
 
-/* line 121, ../../app/assets/stylesheets/public.css.scss */
+/* line 135, ../../app/assets/stylesheets/public.css.scss */
 #content {
   display: table-cell;
   vertical-align: middle;
@@ -10295,45 +10311,45 @@ body {
 
 /* PAGE SECTIONS 
 -------------------------------------------------- */
-/* line 133, ../../app/assets/stylesheets/public.css.scss */
+/* line 147, ../../app/assets/stylesheets/public.css.scss */
 .section {
   padding-top: 66px;
   padding-bottom: 66px;
 }
-/* line 136, ../../app/assets/stylesheets/public.css.scss */
+/* line 150, ../../app/assets/stylesheets/public.css.scss */
 .section h3 {
   margin-bottom: 22px;
   text-transform: uppercase;
 }
 
-/* line 142, ../../app/assets/stylesheets/public.css.scss */
+/* line 156, ../../app/assets/stylesheets/public.css.scss */
 #about, #contact, #infos {
   background-color: #f39200;
 }
 
-/* line 146, ../../app/assets/stylesheets/public.css.scss */
+/* line 160, ../../app/assets/stylesheets/public.css.scss */
 #map {
   background-color: #EBEBEB;
   padding-bottom: 22px;
 }
-/* line 149, ../../app/assets/stylesheets/public.css.scss */
+/* line 163, ../../app/assets/stylesheets/public.css.scss */
 #map h3 {
   margin-bottom: 0;
   color: #333637;
 }
 
-/* line 155, ../../app/assets/stylesheets/public.css.scss */
+/* line 169, ../../app/assets/stylesheets/public.css.scss */
 #contact .contact {
   text-align: center;
   font-size: 12px;
 }
 
-/* line 159, ../../app/assets/stylesheets/public.css.scss */
+/* line 173, ../../app/assets/stylesheets/public.css.scss */
 .firstHeading {
   color: #000;
 }
 
-/* line 162, ../../app/assets/stylesheets/public.css.scss */
+/* line 176, ../../app/assets/stylesheets/public.css.scss */
 #bodyContent {
   color: #000;
 }

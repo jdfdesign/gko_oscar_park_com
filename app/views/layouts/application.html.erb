@@ -12,7 +12,13 @@
     </section>
     <%= render 'footer' %>
   </div>
-
+  <!-- Oscar Park Ad -->
+  <div id="oscar-rental-ad">
+    <%= link_to("http://oscar-car-rental-stbarth.com", :target => "_blank") do %>
+      <%= image_tag("oscar-rental-ad-#{I18n.locale.to_s}.png") %>
+    <% end %>
+  </div>
+  <!-- End Oscar Park Ad -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <%= render 'javascripts' %>

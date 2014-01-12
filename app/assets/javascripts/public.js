@@ -7,6 +7,7 @@
 window.console || (console = {
   log: function() {}
 });
+var map;
 
 jQuery(function($){
   'use strict';
@@ -35,9 +36,7 @@ jQuery(function($){
          logo.fadeIn(600, function() {
            intro_text.animate({opacity:'1'}, 600) 
          });
-         if (typeof(map) != "undefined") {
-           google.maps.event.trigger(map, 'resize');
-         }
+         THEME.gmap();
        });
     });
   }
@@ -167,11 +166,100 @@ jQuery(function($){
         }
       }, 250);
     };
+    
+    /* ==================================================
+      	Gmap
+      ================================================== */
+
+      THEME.gmap = function() {
+        var styles = [
+      				{ stylers: [{ saturation: -100 }, { gamma: 1 }] },
+      				{ elementType: "labels.text.stroke", stylers: [{ visibility: "off" }] },
+      				{ featureType: "poi.business", elementType: "labels.text", stylers: [{ visibility: "off" }] },
+      				{ featureType: "poi.business", elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+      				{ featureType: "poi.place_of_worship", elementType: "labels.text", stylers: [{ visibility: "off" }] },
+      				{ featureType: "poi.place_of_worship", elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+      				{ featureType: "road", elementType: "geometry", stylers: [{ visibility: "simplified" }] },
+      				{ featureType: "water", stylers: [{ visibility: "on" }, { saturation: 50 }, { gamma: 0 }, { hue: "#50a5d1" }] },
+      				{ featureType: "administrative.neighborhood", elementType: "labels.text.fill", stylers: [{ color: "#333333" }] },
+      				{ featureType: "road.local", elementType: "labels.text", stylers: [{ weight: 0.5 }, { color: "#333333" }] },
+      				{ featureType: "transit.station", elementType: "labels.icon", stylers: [{ gamma: 1 }, { saturation: 50 }] }
+      			],
+            styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
+  			var myOptions = {
+  				disableDefaultUI: true,
+  				zoomControl: true,
+  				streetViewControl: true,
+  				zoomControlOptions: {
+  					style: google.maps.ZoomControlStyle.SMALL,
+  					position: google.maps.ControlPosition.LEFT_TOP
+  				},
+  				mapTypeControlOptions: {
+  					mapTypeId: [google.maps.MapTypeId.ROADMAP, 'map_style']
+  				},
+  				zoom: 17,
+  				center: new google.maps.LatLng(17.898187,-62.849759),
+  				mapTypeId: google.maps.MapTypeId.ROADMAP,
+  				scrollwheel: false
+  			}
+
+        map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+  			map.mapTypes.set('map_style', styledMap);
+  			map.setMapTypeId('map_style');
+
+  			var marker_1 = new google.maps.Marker({
+          position: new google.maps.LatLng(17.898067, -62.849822),
+          map: map
+        });
+
+        var content_1 = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Buy your Ticket here</h1>'+
+              '<div id="bodyContent">'+
+              '<p>Buy your parking ticket for OSCARPARK in the shop TOM SHOP.<br/>Opened from 9am to 7pm</p>'+
+              '</div>'+
+              '</div>';
+    
+    
+        var infowindow_1 = new google.maps.InfoWindow({
+          content: content_1
+        });
+       
+        var marker_2 = new google.maps.Marker({
+          position: new google.maps.LatLng(17.896401, -62.847956),
+          map: map
+        });
+    
+        var content_2 = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">OscarPark</h1>'+
+              '<div id="bodyContent">'+
+              '<p>OSCARPARK : your very private parking in Gustavia (St.Barths)</p>'+
+              '</div>'+
+              '</div>';
+    
+    
+        var infowindow_2 = new google.maps.InfoWindow({
+          content: content_2
+        });
+
+        google.maps.event.addListener(marker_1, 'click', function() {
+          infowindow_1.open(map,marker_1);
+        });
+        google.maps.event.addListener(marker_2, 'click', function() {
+          infowindow_2.open(map,marker_2);
+        });
+      }
 /*==================================================
   	Init
 ==================================================*/
 
   $(document).ready(function() {
+    
+    
     THEME.fix();
     THEME.anim(); 
     THEME.textCenter();
@@ -181,12 +269,11 @@ jQuery(function($){
     
     $('.pipe a').attr("data-remote", "true");
     
-    if (typeof(map) != "undefined") {
-      google.maps.event.trigger(map, 'resize');
-    }
+    
     
     $( window ).resize(function() {
       THEME.textCenter();
+      google.maps.event.trigger(map, 'resize');
     });
   });
 }); 

@@ -49,6 +49,20 @@ Author URI:         http://oscar.com
   }
 }
 
+#oscar-rental-ad {
+  //background-color: #F39200;
+  position: fixed;
+  right: -164px;
+  top: $navbar-height + 40px;
+  z-index: 99;
+  width: 280px;
+  height: 116px;
+  @include transition(all 0.4s ease-in-out);
+  &:hover {
+    right: 0;
+  }
+}
+
 /* GLOBAL STYLE
 -------------------------------------------------- */
 // We do not want focus
