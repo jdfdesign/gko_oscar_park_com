@@ -35,7 +35,6 @@ jQuery(function($){
          logo.fadeIn(600, function() {
            intro_text.animate({opacity:'1'}, 600) 
          });
-         
          if (typeof(map) != "undefined") {
            google.maps.event.trigger(map, 'resize');
          }
@@ -181,6 +180,10 @@ jQuery(function($){
     THEME.placeholder();
     
     $('.pipe a').attr("data-remote", "true");
+    
+    if (typeof(map) != "undefined") {
+      google.maps.event.trigger(map, 'resize');
+    }
     
     $( window ).resize(function() {
       THEME.textCenter();
