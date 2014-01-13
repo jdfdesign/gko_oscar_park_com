@@ -14,7 +14,7 @@
   </div>
   <!-- Oscar Park Ad -->
   <div id="oscar-rental-ad">
-    <%= link_to("http://oscar-car-rental-stbarth.com", :target => "_blank") do %>
+    <%= link_to("http://oscar-car-rental-stbarth.com#{'/en' if I18n.locale.to_s == 'en'}", :target => "_blank") do %>
       <%= image_tag("oscar-rental-ad-#{I18n.locale.to_s}.png") %>
     <% end %>
   </div>
