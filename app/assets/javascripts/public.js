@@ -41,14 +41,7 @@ jQuery(function($){
     });
   }
   THEME.textCenter = function(){
-    $('#content-wrapper').css({
-      position:'absolute'
-    });
-
-    $('#content-wrapper').css({
-      left: ($(window).width() - $('#content-wrapper').outerWidth())/2,
-      top: ($(window).height() - $('#content-wrapper').outerHeight())/2
-    });
+    $('#content-wrapper').css("margin-top", ($(window).height() - $('#content-wrapper').outerHeight())/2);
   }
 
   /* ==================================================
@@ -189,7 +182,7 @@ jQuery(function($){
 
   			var myOptions = {
   				disableDefaultUI: true,
-  				zoomControl: true,
+  				zoomControl: false,
   				streetViewControl: true,
   				zoomControlOptions: {
   					style: google.maps.ZoomControlStyle.SMALL,

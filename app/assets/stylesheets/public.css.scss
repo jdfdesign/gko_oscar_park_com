@@ -51,6 +51,7 @@ Author URI:         http://oscar.com
 
 #oscar-rental-ad {
   //background-color: #F39200;
+  display: none;
   position: fixed;
   right: -164px;
   top: $navbar-height + 40px;
@@ -60,6 +61,10 @@ Author URI:         http://oscar.com
   @include transition(all 0.4s ease-in-out);
   &:hover {
     right: 0;
+  }
+
+  @media (min-width: $screen-xs) {
+    display: block !important;
   }
 }
 
@@ -114,6 +119,17 @@ body {
   h1 {
     font-size: 16px;
   }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  @media (min-width: $screen-xs) {
+
+    h2 {
+      font-size: 38px;
+    }
+  }
 }
 
 .no-touch #header{
@@ -125,11 +141,19 @@ body {
 }
 
 #content-wrapper {
-  width: 420px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   height: 320px;
   display:table;
   background-color: rgba(243,146,0,1);
   //padding: $line-height-computed * 2;
+
+  @media (min-width: $screen-xs) {
+    width: 420px !important;
+    
+  }
 }
 #content{
   display:table-cell;
